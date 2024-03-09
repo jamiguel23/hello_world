@@ -1,21 +1,41 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
-	// user specified types
-	const a int32 = 12        // 32 bit
-	const b float32 = 34.2    // 32 bit float
-	var c complex128 = 1 + 4i // 128 complex number
-	var d uint16 = 14         // 16 bit unsigned integer
+	languages := [9]string{
+		"C", "Lisp", "C++", "Java", "Python",
+		"JavaScript", "Ruby", "Go", "Rust", // Must include the trailing comma
 
-	// default types
-	n := 42                    // int
-	pi := 3.14                 // float54
-	x, y := true, false        // bool
-	z := "this is a Go string" // string
+	}
 
-	fmt.Printf("user-specified \n %T %T %T %T\n", a, b, c, d)
-	fmt.Printf("default \n %T %T %T %T %T\n", n, pi, x, y, z)
+	// define slices
+	/*
+		classics := languages[0:3]
+		// modern := make([]string, 4)
+		modern := languages[3:7]
+		new := languages[7:9]
+
+		fmt.Printf("the classics %v\n", classics)
+		fmt.Printf("Basic bois %v\n", modern)
+		fmt.Printf("new kids on the block%v\n", new)
+	*/
+
+	allLangs := languages[:]
+	fmt.Println(reflect.TypeOf(allLangs).Kind())
+
+	frameworks := []string{
+		"React", "Vue", "Angular", "Svelte",
+		"Laravel", "Django", "Flask", "Fiber",
+	}
+
+	jsFrameworks := frameworks[0:4:4]
+	frameworks = append(frameworks, "meteor")
+
+	fmt.Printf("all frameworks %v\n", frameworks)
+	fmt.Printf("js frameworks %v\n", jsFrameworks)
 }
