@@ -4,18 +4,21 @@ import "fmt"
 
 func main() {
 
-	// user specified types
-	const a int32 = 12        // 32 bit
-	const b float32 = 34.2    // 32 bit float
-	var c complex128 = 1 + 4i // 128 complex number
-	var d uint16 = 14         // 16 bit unsigned integer
+	//defining an array that stores 4 items
+	var testArr = [4]string{"yes", "no", "stop", "naur"}
 
-	// default types
-	n := 42                    // int
-	pi := 3.14                 // float54
-	x, y := true, false        // bool
-	z := "this is a Go string" // string
+	// loop through
+	fmt.Println("for loop")
+	for i := 0; i < len(testArr); i++ {
+		item := testArr[i]
+		fmt.Println(i, item)
+	}
 
-	fmt.Printf("user-specified \n %T %T %T %T\n", a, b, c, d)
-	fmt.Printf("default \n %T %T %T %T %T\n", n, pi, x, y, z)
+	var testArr1 = [...]string{"what", "life", "donut", "test"}
+
+	fmt.Println("range")
+
+	for index, item := range testArr1 {
+		fmt.Println(index, item)
+	}
 }
