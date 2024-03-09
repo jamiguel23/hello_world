@@ -25,4 +25,17 @@ func main() {
 		fmt.Printf("new kids on the block%v\n", new)
 	*/
 
+	allLangs := languages[:]
+	fmt.Println(reflect.TypeOf(allLangs).Kind())
+
+	frameworks := []string{
+		"React", "Vue", "Angular", "Svelte",
+		"Laravel", "Django", "Flask", "Fiber",
+	}
+
+	jsFrameworks := frameworks[0:4:4]
+	frameworks = append(frameworks, "meteor")
+
+	fmt.Printf("all frameworks %v\n", frameworks)
+	fmt.Printf("js frameworks %v\n", jsFrameworks)
 }
