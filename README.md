@@ -31,7 +31,7 @@ var (
 
 ```
 
-Name the varialbe and define its data type.
+Name the variable and define its data type.
 
 Here is a sample of a the shorthand operator **':='** which assigns and initialize in one line.
 
@@ -44,3 +44,29 @@ Here is a sample of a the shorthand operator **':='** which assigns and initiali
 
 ```
 
+## Data Types
+
+Examples on how to declare different datatypes
+
+```
+
+// user specified types
+	const a int32 = 12        // 32 bit
+	const b float32 = 34.2    // 32 bit float
+	var c complex128 = 1 + 4i // 128 complex number
+	var d uint16 = 14         // 16 bit unsigned integer
+
+	// default types
+	n := 42                    // int
+	pi := 3.14                 // float54
+	x, y := true, false        // bool
+	z := "this is a Go string" // string
+
+	fmt.Printf("user-specified \n %T %T %T %T\n", a, b, c, d)
+	fmt.Printf("default \n %T %T %T %T %T\n", n, pi, x, y, z)
+
+```
+
+Note the **'%T'** syntax in the Printf. This is called a verb and it will print the data type of the corresponding variable that is printed.
+
+## Arrays
