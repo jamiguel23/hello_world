@@ -69,4 +69,6 @@ Examples on how to declare different datatypes
 
 Note the **'%T'** syntax in the Printf. This is called a verb and it will print the data type of the corresponding variable that is printed.
 
-## Arrays
+## Slice
+
+Slices are thought of as dynamic arrays. They can grow unlike arrays.
